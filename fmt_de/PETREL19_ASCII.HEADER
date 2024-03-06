@@ -15,7 +15,7 @@ GROUP   1030
 GROUP   1040                                                                                                                                                                        
                                                                                                                                                                                     
    513                                                                                                                                                                              
-  EPH_V   EPH_DT  JDEPOC  CENTER  CLIGHT  BETA    GAMMA   AU      EMRAT   GM001                                                                                                     
+  DENUM   EPH_DT  JDEPOC  CENTER  CLIGHT  BETA    GAMMA   AU      EMRAT   GM001                                                                                                     
   GM002   GM003   GM005   GM006   GM007   GM008   GM009   GM010   GM011   GM012                                                                                                     
   X001    Y001    Z001    XP001   YP001   ZP001   X002    Y002    Z002    XP002                                                                                                     
   YP002   ZP002   X003    Y003    Z003    XP003   YP003   ZP003   X005    Y005                                                                                                      
