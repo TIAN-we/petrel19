@@ -1,0 +1,25 @@
+1. The ephemeris dataset of planetary and lunar ephemeris PETREL19 (Tian 2023) in the directory is released in the JPL/DE ephemeris format. It contains one header file (PETREL19_ASCII.HEADER), and two ephemeris files (PETREL19_ASCII.PART1 and PETREL19_ASCII.PART2).
+
+2. Subroutines used to read the ephemeris files: (1) the subroutine asc2eph.f (converting the ASCII files into a binary file), and (2) the subroutine testeph1.f (testing the converted binary ephemeris file with testpo.petrel19). The Fortran subroutines are available from JPL Solar System Dynamics SSD: https://ssd.jpl.nasa.gov/ftp/eph/planets/fortran/.
+
+As an example, the following procedure works well with an open-source fortran compiler gfrotran (operation system: macOS sonoma Version 14.0).
+
+   gfortran -c asc2eph.f
+
+   gfortran -o asc2eph asc2eph.o
+
+   cat ./PETREL19_ASCII.HEADER ./PETREL19_ASCII.PART1 ./PETREL19_ASCII.PART2 | ./asc2eph
+
+   gfortran -c testeph1.f
+
+   gfortran -o testeph1 testeph1.o
+
+   cat testpo.petrel19 | ./testeph1  > result.txt
+
+3. Some modifications to the above command lines may be needed for other fortran compilers and operation systems. 
+
+4. Reference: Tian, W. PETREL19: a new numerical solution of planetary and lunar ephemeris. Celest Mech Dyn Astron 135, 38 (2023).
+
+
+Wei TIAN
+29 February 2024

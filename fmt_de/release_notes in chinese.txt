@@ -1,0 +1,26 @@
+1. 按照JPL/DE历表格式公开的行星/月球历表PETREL19数据集，包括头文件(PETREL19_ASCII.HEADER)和历表数据文件(PETREL19_ASCII.PART1 and PETREL19_ASCII.PART2).
+
+2. 用于读取历表数据的程序：(1) asc2eph.f (用于格式转换，从ASCII码文件到二进制文件), (2) testeph1.f (用于测试转换后的二进制格式文件). 相关程序可以在JPL/SSD官网获取: https://ssd.jpl.nasa.gov/ftp/eph/planets/fortran/.
+
+   作为一个例子，利用开源fortran编译器（gfortran）运行下列代码可以对历表文件进行编译和测试(操作系统: macOS sonoma Version 14.0).
+
+   gfortran -c asc2eph.f
+
+   gfortran -o asc2eph asc2eph.o
+
+   cat ./PETREL19_ASCII.HEADER ./PETREL19_ASCII.PART1 ./PETREL19_ASCII.PART2 | ./asc2eph
+
+   gfortran -c testeph1.f
+
+   gfortran -o testeph1 testeph1.o
+
+   cat testpo.petrel19 | ./testeph1  > result.txt
+
+3. 针对不同的编译器和操作系统，上述代码可能需要相应的修改。
+
+
+4. 参考文献: Tian, W. PETREL19: a new numerical solution of planetary and lunar ephemeris. Celest Mech Dyn Astron 135, 38 (2023).
+
+
+田伟
+二零二四年二月二十九日

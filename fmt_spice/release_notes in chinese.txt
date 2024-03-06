@@ -1,0 +1,44 @@
+1. 按照IAU推荐的历表标准格式（Hilton et al. 2015）公开的行星/月球历表PETREL19（Tian 2023）文件包括了， 
+  (1) 主要天体的历表文件 (PETREL19_translation.bsp), 
+  (2) 时间历表文件 (PETREL19_time.bsp), 
+  (3) 月球自转文件 (PETREL19_rotation.bpc),
+  (4) 月面参考系文件 (PETREL19_lunar_frame_3011.tf),
+  (5) 历表常数文件 ( PETREL19.tpc),
+  (6) 在调用程序中用于加载历表数据的MK文件 (PETREL19.mk) 
+
+2. 调用程序或工具：NAIF/SPCIE工具包/程序库 (https://naif.jpl.nasa.gov/naif/toolkit.html)
+
+3. 二进制文件的简要描述：
+   (1) PETREL19_translation.bsp
+       Bodies: MERCURY BARYCENTER (1)  SATURN BARYCENTER (6)   MERCURY (199)
+               VENUS BARYCENTER (2)    URANUS BARYCENTER (7)   VENUS (299)
+               EARTH BARYCENTER (3)    NEPTUNE BARYCENTER (8)  MOON (301)
+               MARS BARYCENTER (4)     PLUTO BARYCENTER (9)    EARTH (399)
+               JUPITER BARYCENTER (5)  SUN (10)
+               Start of Interval (ET)              End of Interval (ET)
+               -----------------------------       -----------------------------
+               1799 OCT 13 00:00:00.000            2106 MAY 05 00:00:00.000
+
+   (2) PETREL19_time.bsp
+       Body: 1000000001
+             Start of Interval (ET)              End of Interval (ET)
+             -----------------------------       -----------------------------
+             1799 OCT 13 00:00:00.000            2106 MAY 05 00:00:00.000
+
+   (3) PETREL19_rotation.bpc
+ 
+       Frame: 3011
+              Start of Interval (ET)              End of Interval (ET)
+              -----------------------------       -----------------------------
+              1799 OCT 13 00:00:00.000            2106 MAY 05 00:00:00.000
+ 
+4. 参考文献：
+
+   Tian, W. PETREL19: a new numerical solution of planetary and lunar ephemeris. Celest Mech Dyn Astron 135, 38 (2023).
+
+
+   Hilton, J. L., Acton, C., Arlot, J.-E., Bell, S. A., Capitaine, N., Fienga, A., Folkner, W. M., Gastineau, M., Pavlov, D., Pitjeva, E. V., Skripnichenko, V. I., & Wallace, P. (2015). Final update of the IAU Commission 4 working group on standardizing access to ephemerides and file format specification. Division A poster (DAp.2.04) at General Assembly XXIX, International Astronomical Union. Detailed report at http://arxiv.org/abs/1507.04291.
+
+
+田伟
+二零二四年二月二十九日
